@@ -461,7 +461,7 @@ class DEN(object):
             else:
                 # addition
                 self.destroy_graph()
-                self.sess = tf.Session()
+                self.sess = tf.Session()  # for commit
                 self.load_params(params)
                 self.set_initial_states(data_size)
                 self.build_model(task_id, expansion=True)
